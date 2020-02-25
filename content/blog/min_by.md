@@ -1,0 +1,22 @@
+---
+date: "2020-01-04"
+description: ''
+title: Python como usar o min_by
+tags: math,list,function,beginner
+---
+
+Returns the minimum value of a list, after mapping each element to a value using the provided function.
+
+Use `map()` with `fn` to map each element to a value using the provided function, use `min()` to return the minimum value.
+
+```py
+def min_by(lst, fn):
+  return min(map(fn, lst))
+```
+
+```py
+min_by([{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }], lambda v : v['n']) # 2
+```
+
+[Acesse a Referência original 1:](https://www.pythonsheets.com/)
+[Acesse a Referência original 2:](https://www.pythoncheatsheet.org/)

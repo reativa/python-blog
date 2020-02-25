@@ -1,0 +1,23 @@
+---
+date: "2020-01-04"
+description: ''
+title: Python como usar o none
+tags: list,function,intermediate
+---
+
+Returns `False` if the provided function returns `True` for at least one element in the list, `True` otherwise.
+
+Use `all()` and `fn` to check if `fn` returns `False` for all the elements in the list.
+
+```py
+def none(lst, fn=lambda x: x):
+  return all(not fn(x) for x in lst)
+```
+
+```py
+none([0, 1, 2, 0], lambda x: x >= 2 ) # False
+none([0, 0, 0]) # True
+```
+
+[Acesse a Referência original 1:](https://www.pythonsheets.com/)
+[Acesse a Referência original 2:](https://www.pythoncheatsheet.org/)
