@@ -1,0 +1,925 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><style data-href="/styles.1d07f1255d05a1395a48.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.18.12"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2374911412821725'); // Insert your pixel ID here.
+  fbq('track', 'PageView');
+      </script><script>window.dataLayer = window.dataLayer || [];window.dataLayer.push({"platform":"plataforma-reativa"}); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-KZH8KWD');</script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/icons/icon-48x48.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a4533d42454f73956ac7c2f680393b78"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a4533d42454f73956ac7c2f680393b78"/><title data-react-helmet="true">Python tudo sobre Typing | Python para impacientes</title><meta data-react-helmet="true" name="description" content="PEP 484, which provides a
+specification about what a type system should look like in Python3,
+introduced the concept of type hints. Moreover, to better…"/><meta data-react-helmet="true" property="og:title" content="Python tudo sobre Typing"/><meta data-react-helmet="true" property="og:description" content="PEP 484, which provides a
+specification about what a type system should look like in Python3,
+introduced the concept of type hints. Moreover, to better…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Reativa"/><meta data-react-helmet="true" name="twitter:title" content="Python tudo sobre Typing"/><meta data-react-helmet="true" name="twitter:description" content="PEP 484, which provides a
+specification about what a type system should look like in Python3,
+introduced the concept of type hints. Moreover, to better…"/><link as="script" rel="preload" href="/webpack-runtime-002569f02672c1c38772.js"/><link as="script" rel="preload" href="/styles-989bb08664f2608f37ec.js"/><link as="script" rel="preload" href="/netlify-identity-widget-71f3202b04975b5e224a.js"/><link as="script" rel="preload" href="/app-da4c9f678cc075cd8c26.js"/><link as="script" rel="preload" href="/commons-2011af21236d35f89581.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-2642abeb110b544c12ef.js"/><link as="fetch" rel="preload" href="/page-data/python-typing/page-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZH8KWD" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Python para impacientes</a></h3></header><main><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">Python tudo sobre Typing</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">January 05, 2020</p></header><section><h1></h1>
+<p>PEP <a href="https://www.python.org/dev/peps/pep-0484/">484</a>, which provides a
+specification about what a type system should look like in Python3,
+introduced the concept of type hints. Moreover, to better understand the
+type hints design philosophy, it is crucial to read PEP
+<a href="https://www.python.org/dev/peps/pep-0483/">483</a> that would be helpful
+to aid a pythoneer to understand reasons why Python introduce a type
+system. The main goal of this cheat sheet is to show some common usage
+about type hints in Python3.</p>
+<h2>Without type check</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> a
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>n <span class="token keyword">for</span> n <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">3.6</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># errors will not be detected until runtime</span>
+
+$ python fib.py
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">"fib.py"</span>, line <span class="token number">8</span>, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+    print<span class="token punctuation">(</span><span class="token punctuation">[</span>n <span class="token keyword">for</span> <span class="token for-or-select variable">n</span> <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  File <span class="token string">"fib.py"</span>, line <span class="token number">8</span>, <span class="token keyword">in</span> <span class="token operator">&lt;</span>listcomp<span class="token operator">></span>
+    print<span class="token punctuation">(</span><span class="token punctuation">[</span>n <span class="token keyword">for</span> <span class="token for-or-select variable">n</span> <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  File <span class="token string">"fib.py"</span>, line <span class="token number">3</span>, <span class="token keyword">in</span> fib
+    <span class="token keyword">for</span> <span class="token for-or-select variable">_</span> <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span>:
+TypeError: <span class="token string">'float'</span> object cannot be interpreted as an integer</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>With type check</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># give a type hint</span>
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Generator
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Generator<span class="token punctuation">:</span>
+    a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">0</span>
+    b<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> a
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>n <span class="token keyword">for</span> n <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">3.6</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># errors will be detected before running</span>
+
+$ mypy --strict fib.py
+fib.py:12: error: Argument <span class="token number">1</span> to <span class="token string">"fib"</span> has incompatible <span class="token builtin class-name">type</span> <span class="token string">"float"</span><span class="token punctuation">;</span> expected <span class="token string">"int"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Basic types</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> io
+<span class="token keyword">import</span> re
+
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> deque<span class="token punctuation">,</span> namedtuple
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> <span class="token punctuation">(</span>
+    Dict<span class="token punctuation">,</span>
+    List<span class="token punctuation">,</span>
+    Tuple<span class="token punctuation">,</span>
+    Set<span class="token punctuation">,</span>
+    Deque<span class="token punctuation">,</span>
+    NamedTuple<span class="token punctuation">,</span>
+    IO<span class="token punctuation">,</span>
+    Pattern<span class="token punctuation">,</span>
+    Match<span class="token punctuation">,</span>
+    Text<span class="token punctuation">,</span>
+    Optional<span class="token punctuation">,</span>
+    Sequence<span class="token punctuation">,</span>
+    Iterable<span class="token punctuation">,</span>
+    Mapping<span class="token punctuation">,</span>
+    MutableMapping<span class="token punctuation">,</span>
+    Any<span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># without initializing</span>
+x<span class="token punctuation">:</span> <span class="token builtin">int</span>
+
+<span class="token comment"># any type</span>
+y<span class="token punctuation">:</span> Any
+y <span class="token operator">=</span> <span class="token number">1</span>
+y <span class="token operator">=</span> <span class="token string">"1"</span>
+
+<span class="token comment"># built-in</span>
+var_int<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+var_str<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">"Hello Typing"</span>
+var_byte<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> <span class="token string">b"Hello Typing"</span>
+var_bool<span class="token punctuation">:</span> <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+var_float<span class="token punctuation">:</span> <span class="token builtin">float</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">.</span>
+var_unicode<span class="token punctuation">:</span> Text <span class="token operator">=</span> <span class="token string">u'\u2713'</span>
+
+<span class="token comment"># could be none</span>
+var_could_be_none<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+var_could_be_none <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># collections</span>
+var_set<span class="token punctuation">:</span> Set<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+var_dict<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"foo"</span><span class="token punctuation">:</span> <span class="token string">"Foo"</span><span class="token punctuation">}</span>
+var_list<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+var_Tuple<span class="token punctuation">:</span> Tuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+var_deque<span class="token punctuation">:</span> Deque <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+var_nametuple<span class="token punctuation">:</span> NamedTuple <span class="token operator">=</span> namedtuple<span class="token punctuation">(</span><span class="token string">'P'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token string">'y'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># io</span>
+var_io_str<span class="token punctuation">:</span> IO<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> io<span class="token punctuation">.</span>StringIO<span class="token punctuation">(</span><span class="token string">"Hello String"</span><span class="token punctuation">)</span>
+var_io_byte<span class="token punctuation">:</span> IO<span class="token punctuation">[</span><span class="token builtin">bytes</span><span class="token punctuation">]</span> <span class="token operator">=</span> io<span class="token punctuation">.</span>BytesIO<span class="token punctuation">(</span><span class="token string">b"Hello Bytes"</span><span class="token punctuation">)</span>
+var_io_file_str<span class="token punctuation">:</span> IO<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+var_io_file_byte<span class="token punctuation">:</span> IO<span class="token punctuation">[</span><span class="token builtin">bytes</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>__file__<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># re</span>
+p<span class="token punctuation">:</span> Pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"(https?)://([^/\r\n]+)(/[^\r\n]*)?"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>Match<span class="token punctuation">]</span> <span class="token operator">=</span> p<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">"https://www.python.org/"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># duck types: list-like</span>
+var_seq_list<span class="token punctuation">:</span> Sequence<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+var_seq_tuple<span class="token punctuation">:</span> Sequence<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+var_iter_list<span class="token punctuation">:</span> Iterable<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+var_iter_tuple<span class="token punctuation">:</span> Iterable<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment"># duck types: dict-like</span>
+var_map_dict<span class="token punctuation">:</span> Mapping<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"foo"</span><span class="token punctuation">:</span> <span class="token string">"Foo"</span><span class="token punctuation">}</span>
+var_mutable_dict<span class="token punctuation">:</span> MutableMapping<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"bar"</span><span class="token punctuation">:</span> <span class="token string">"Bar"</span><span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Functions</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Generator<span class="token punctuation">,</span> Callable
+
+<span class="token comment"># function</span>
+<span class="token keyword">def</span> <span class="token function">gcd</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> b<span class="token punctuation">:</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token operator">%</span> b
+    <span class="token keyword">return</span> a
+
+<span class="token comment"># callback</span>
+<span class="token keyword">def</span> <span class="token function">fun</span><span class="token punctuation">(</span>cb<span class="token punctuation">:</span> Callable<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> cb<span class="token punctuation">(</span><span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">66</span><span class="token punctuation">)</span>
+
+<span class="token comment"># lambda</span>
+f<span class="token punctuation">:</span> Callable<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">*</span> <span class="token number">2</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Classes</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> ClassVar<span class="token punctuation">,</span> Dict<span class="token punctuation">,</span> List
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+
+    x<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>  <span class="token comment"># instance variable. default = 1</span>
+    y<span class="token punctuation">:</span> ClassVar<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"class var"</span>  <span class="token comment"># class variable</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>i<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Dict<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>a<span class="token punctuation">:</span> b<span class="token punctuation">}</span>
+
+foo <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+foo<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">123</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>foo<span class="token punctuation">.</span>x<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>foo<span class="token punctuation">.</span>i<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>Foo<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>foo<span class="token punctuation">.</span>foo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Generator</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Generator
+
+<span class="token comment"># Generator[YieldType, SendType, ReturnType]</span>
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Generator<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">0</span>
+    b<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> n <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> a
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+        n <span class="token operator">-=</span> <span class="token number">1</span>
+
+g<span class="token punctuation">:</span> Generator <span class="token operator">=</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+i<span class="token punctuation">:</span> Iterator<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Asynchronous Generator</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> asyncio
+
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> AsyncGenerator<span class="token punctuation">,</span> AsyncIterator
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> AsyncGenerator<span class="token punctuation">:</span>
+    a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">0</span>
+    b<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> n <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">await</span> asyncio<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+        <span class="token keyword">yield</span> a
+
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+        n <span class="token operator">-=</span> <span class="token number">1</span>
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">async</span> <span class="token keyword">for</span> f <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+    ag<span class="token punctuation">:</span> AsyncIterator <span class="token operator">=</span> <span class="token punctuation">(</span>f <span class="token keyword">async</span> <span class="token keyword">for</span> f <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+loop <span class="token operator">=</span> asyncio<span class="token punctuation">.</span>get_event_loop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+loop<span class="token punctuation">.</span>run_until_complete<span class="token punctuation">(</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Context Manager</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> ContextManager<span class="token punctuation">,</span> Generator<span class="token punctuation">,</span> IO
+<span class="token keyword">from</span> contextlib <span class="token keyword">import</span> contextmanager
+
+@contextmanager
+<span class="token keyword">def</span> <span class="token function">open_file</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Generator<span class="token punctuation">:</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">yield</span> f
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cm<span class="token punctuation">:</span> ContextManager<span class="token punctuation">[</span>IO<span class="token punctuation">]</span> <span class="token operator">=</span> open_file<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+<span class="token keyword">with</span> cm <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Asynchronous Context Manager</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> asyncio
+
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> AsyncContextManager<span class="token punctuation">,</span> AsyncGenerator<span class="token punctuation">,</span> IO
+<span class="token keyword">from</span> contextlib <span class="token keyword">import</span> asynccontextmanager
+
+<span class="token comment"># need python 3.7 or above</span>
+<span class="token decorator annotation punctuation">@asynccontextmanager</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">open_file</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> AsyncGenerator<span class="token punctuation">:</span>
+    <span class="token keyword">await</span> asyncio<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">yield</span> f
+    <span class="token keyword">await</span> asyncio<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    acm<span class="token punctuation">:</span> AsyncContextManager<span class="token punctuation">[</span>IO<span class="token punctuation">]</span> <span class="token operator">=</span> open_file<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+    <span class="token keyword">async</span> <span class="token keyword">with</span> acm <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+loop <span class="token operator">=</span> asyncio<span class="token punctuation">.</span>get_event_loop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+loop<span class="token punctuation">.</span>run_until_complete<span class="token punctuation">(</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Avoid <code class="language-text">None</code> access</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> re
+
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Pattern<span class="token punctuation">,</span> Dict<span class="token punctuation">,</span> Optional
+
+<span class="token comment"># like c++</span>
+<span class="token comment"># std::regex url("(https?)://([^/\r\n]+)(/[^\r\n]*)?");</span>
+<span class="token comment"># std::regex color("^#?([a-f0-9]{6}|[a-f0-9]{3})$");</span>
+
+url<span class="token punctuation">:</span> Pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"(https?)://([^/\r\n]+)(/[^\r\n]*)?"</span><span class="token punctuation">)</span>
+color<span class="token punctuation">:</span> Pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"^#?([a-f0-9]{6}|[a-f0-9]{3})$"</span><span class="token punctuation">)</span>
+
+x<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> Pattern<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"url"</span><span class="token punctuation">:</span> url<span class="token punctuation">,</span> <span class="token string">"color"</span><span class="token punctuation">:</span> color<span class="token punctuation">}</span>
+y<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>Pattern<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"baz"</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">"https://www.python.org/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:15: error: Item <span class="token string">"None"</span> of <span class="token string">"Optional[Pattern[Any]]"</span> has no attribute <span class="token string">"match"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>Positional-only arguments</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># define arguments with names beginning with __</span>
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>__n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>  <span class="token comment"># positional only arg</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>__n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+    <span class="token keyword">return</span> a
+
+
+<span class="token keyword">def</span> <span class="token function">gcd</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span> a<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>  <span class="token comment"># keyword only arg</span>
+    <span class="token keyword">while</span> b<span class="token punctuation">:</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token operator">%</span> b
+    <span class="token keyword">return</span> a
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span>__n<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># error</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>gcd<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># error</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">mypy --strict foo.py
+foo.py:1: note: <span class="token string">"fib"</span> defined here
+foo.py:14: error: Unexpected keyword argument <span class="token string">"__n"</span> <span class="token keyword">for</span> <span class="token string">"fib"</span>
+foo.py:15: error: Too many positional arguments <span class="token keyword">for</span> <span class="token string">"gcd"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Multiple return values</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Tuple<span class="token punctuation">,</span> Iterable<span class="token punctuation">,</span> Union
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Tuple<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">,</span> y
+
+<span class="token comment"># or</span>
+
+<span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Iterable<span class="token punctuation">[</span>Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token comment"># XXX: not recommend declaring in this way</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">,</span> y
+
+a<span class="token punctuation">:</span> <span class="token builtin">int</span>
+b<span class="token punctuation">:</span> <span class="token builtin">int</span>
+a<span class="token punctuation">,</span> b <span class="token operator">=</span> foo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>      <span class="token comment"># ok</span>
+c<span class="token punctuation">,</span> d <span class="token operator">=</span> bar<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"bar"</span><span class="token punctuation">)</span>  <span class="token comment"># ok</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Union[Any, None] == Optional[Any]</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Union
+
+<span class="token keyword">def</span> <span class="token function">first</span><span class="token punctuation">(</span>l<span class="token punctuation">:</span> List<span class="token punctuation">[</span>Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token boolean">None</span> <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+first<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># equal to</span>
+
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Optional
+
+<span class="token keyword">def</span> <span class="token function">first</span><span class="token punctuation">(</span>l<span class="token punctuation">:</span> List<span class="token punctuation">[</span>Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token boolean">None</span> <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+first<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Be careful of <code class="language-text">Optional</code></h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> cast<span class="token punctuation">,</span> Optional
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+    <span class="token keyword">return</span> a
+
+<span class="token keyword">def</span> <span class="token function">cal</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+cal<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># mypy will not detect errors</span>
+$ mypy foo.py</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>Explicitly declare</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>  <span class="token comment"># declare n to be int</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+    <span class="token keyword">return</span> a
+
+<span class="token keyword">def</span> <span class="token function">cal</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># mypy can detect errors even we do not check None</span>
+$ mypy --strict foo.py
+foo.py:11: error: Argument <span class="token number">1</span> to <span class="token string">"fib"</span> has incompatible <span class="token builtin class-name">type</span> <span class="token string">"Optional[int]"</span><span class="token punctuation">;</span> expected <span class="token string">"int"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<h2>Be careful of casting</h2>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> cast<span class="token punctuation">,</span> Optional
+
+<span class="token keyword">def</span> <span class="token function">gcd</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> b<span class="token punctuation">:</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token operator">%</span> b
+    <span class="token keyword">return</span> a
+
+<span class="token keyword">def</span> <span class="token function">cal</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># XXX: Avoid casting</span>
+    ca<span class="token punctuation">,</span> cb <span class="token operator">=</span> cast<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">,</span> cast<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>gcd<span class="token punctuation">(</span>ca<span class="token punctuation">,</span> cb<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+cal<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># mypy will not detect type errors</span>
+$ mypy --strict foo.py</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>Forward references</h2>
+<p>Based on PEP 484, if we want to reference a type before it has been
+declared, we have to use <strong>string literal</strong> to imply that there is a
+type of that name later on in the file.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
+
+
+<span class="token keyword">class</span> <span class="token class-name">Tree</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>
+        self<span class="token punctuation">,</span> data<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span>
+        left<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token string">"Tree"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment"># Forward references.</span>
+        right<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token string">"Tree"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> left
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> right</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="admonition note">
+<p>There are some issues that mypy does not complain about Forward
+References. Get further information from <a href="">Issue#948</a>.</p>
+</div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>  <span class="token comment"># should fail</span>
+        self<span class="token punctuation">.</span>a <span class="token operator">=</span> a</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict type.py
+$ <span class="token builtin class-name">echo</span> <span class="token variable">$?</span>
+<span class="token number">0</span>
+$ python type.py   <span class="token comment"># get runtime fail</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">"type.py"</span>, line <span class="token number">1</span>, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+    class A:
+  File <span class="token string">"type.py"</span>, line <span class="token number">2</span>, <span class="token keyword">in</span> A
+    def __init__<span class="token punctuation">(</span>self, a: A<span class="token punctuation">)</span> -<span class="token operator">></span> None:  <span class="token comment"># should fail</span>
+NameError: name <span class="token string">'A'</span> is not defined</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Postponed Evaluation of Annotations</h2>
+<p><strong>New in Python 3.7</strong></p>
+<ul>
+<li>PEP <a href="https://www.python.org/dev/peps/pep-0563/">563</a> - Postponed
+Evaluation of Annotations</li>
+</ul>
+<p>Before Python 3.7</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         self<span class="token punctuation">.</span>_a <span class="token operator">=</span> a
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  File <span class="token string">"&lt;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+  File <span class="token string">"&lt;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">in</span> A
+NameError<span class="token punctuation">:</span> name <span class="token string">'A'</span> <span class="token keyword">is</span> <span class="token keyword">not</span> defined</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>After Python 3.7 (include 3.7)</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">from</span> __future__ <span class="token keyword">import</span> annotations
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         self<span class="token punctuation">.</span>_a <span class="token operator">=</span> a
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="admonition note">
+<p>Annotation can only be used within the scope which names have already
+existed. Therefore, <strong>forward reference</strong> does not support the case
+which names are not available in the current scope. <strong>Postponed
+evaluation of annotations</strong> will become the default behavior in Python
+4.0.</p>
+</div>
+<h2>Type alias</h2>
+<p>Like <code class="language-text">typedef</code> or <code class="language-text">using</code> in c/c++</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;regex&gt;
+#include &lt;vector&gt;
+
+typedef std::string Url;
+template&lt;typename T&gt; using Vector = std::vector&lt;T&gt;;
+
+int main(int argc, char *argv[])
+{
+    Url url = &quot;https://python.org&quot;;
+    std::regex p(&quot;(https?)://([^/\r\n]+)(/[^\r\n]*)?&quot;);
+    bool m = std::regex_match(url, p);
+    Vector&lt;int&gt; v = {1, 2};
+
+    std::cout &lt;&lt; m &lt;&lt; std::endl;
+    for (auto it : v) std::cout &lt;&lt; it &lt;&lt; std::endl;
+    return 0;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Type aliases are defined by simple variable assignments</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> re
+
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Pattern<span class="token punctuation">,</span> List
+
+<span class="token comment"># Like typedef, using in c/c++</span>
+
+<span class="token comment"># PEP 484 recommend capitalizing alias names</span>
+Url <span class="token operator">=</span> <span class="token builtin">str</span>
+
+url<span class="token punctuation">:</span> Url <span class="token operator">=</span> <span class="token string">"https://www.python.org/"</span>
+
+p<span class="token punctuation">:</span> Pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"(https?)://([^/\r\n]+)(/[^\r\n]*)?"</span><span class="token punctuation">)</span>
+m <span class="token operator">=</span> p<span class="token punctuation">.</span>match<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+Vector <span class="token operator">=</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span>
+v<span class="token punctuation">:</span> Vector <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Define a <code class="language-text">NewType</code></h2>
+<p>Unlike alias, <code class="language-text">NewType</code> returns a separate type but is identical to the
+original type at runtime.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sqlalchemy <span class="token keyword">import</span> Column<span class="token punctuation">,</span> String<span class="token punctuation">,</span> Integer
+<span class="token keyword">from</span> sqlalchemy<span class="token punctuation">.</span>ext<span class="token punctuation">.</span>declarative <span class="token keyword">import</span> declarative_base
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> NewType<span class="token punctuation">,</span> Any
+
+<span class="token comment"># check mypy #2477</span>
+Base<span class="token punctuation">:</span> Any <span class="token operator">=</span> declarative_base<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># create a new type</span>
+Id <span class="token operator">=</span> NewType<span class="token punctuation">(</span><span class="token string">'Id'</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token comment"># not equal alias, it's a 'new type'</span>
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>Base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    __tablename__ <span class="token operator">=</span> <span class="token string">'User'</span>
+    <span class="token builtin">id</span> <span class="token operator">=</span> Column<span class="token punctuation">(</span>Integer<span class="token punctuation">,</span> primary_key<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    age <span class="token operator">=</span> Column<span class="token punctuation">(</span>Integer<span class="token punctuation">,</span> nullable<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    name <span class="token operator">=</span> Column<span class="token punctuation">(</span>String<span class="token punctuation">,</span> nullable<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">:</span> Id<span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token builtin">id</span> <span class="token operator">=</span> <span class="token builtin">id</span>
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+<span class="token comment"># create users</span>
+user1 <span class="token operator">=</span> User<span class="token punctuation">(</span>Id<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">62</span><span class="token punctuation">,</span> <span class="token string">"Guido van Rossum"</span><span class="token punctuation">)</span> <span class="token comment"># ok</span>
+user2 <span class="token operator">=</span> User<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">,</span> <span class="token string">"David M. Beazley"</span><span class="token punctuation">)</span>     <span class="token comment"># error</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ python foo.py
+$ mypy --ignore-missing-imports foo.py
+foo.py:24: error: Argument <span class="token number">1</span> to <span class="token string">"User"</span> has incompatible <span class="token builtin class-name">type</span> <span class="token string">"int"</span><span class="token punctuation">;</span> expected <span class="token string">"Id"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>Further reading:</p>
+<ul>
+<li><a href="https://github.com/python/mypy/issues/1284">Issue#1284</a></li>
+</ul>
+<h2>Using <code class="language-text">TypeVar</code> as template</h2>
+<p>Like c++ <code class="language-text">template &lt;typename T&gt;</code></p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">#include &lt;iostream&gt;
+
+template &lt;typename T&gt;
+T add(T x, T y) {
+    return x + y;
+}
+
+int main(int argc, char *argv[])
+{
+    std::cout &lt;&lt; add(1, 2) &lt;&lt; std::endl;
+    std::cout &lt;&lt; add(1., 2.) &lt;&lt; std::endl;
+    return 0;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Python using <code class="language-text">TypeVar</code></p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> T<span class="token punctuation">,</span> y<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> y
+
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>Using <code class="language-text">TypeVar</code> and <code class="language-text">Generic</code> as class template</h2>
+<p>Like c++ <code class="language-text">template &lt;typename T&gt; class</code></p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">#include &lt;iostream&gt;
+
+template&lt;typename T&gt;
+class Foo {
+public:
+    Foo(T foo) {
+        foo_ = foo;
+    }
+    T Get() {
+        return foo_;
+    }
+private:
+    T foo_;
+};
+
+int main(int argc, char *argv[])
+{
+    Foo&lt;int&gt; f(123);
+    std::cout &lt;&lt; f.Get() &lt;&lt; std::endl;
+    return 0;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Define a generic class in Python</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Generic<span class="token punctuation">,</span> TypeVar
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span>Generic<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> foo<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>foo <span class="token operator">=</span> foo
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>foo
+
+f<span class="token punctuation">:</span> Foo<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"Foo"</span><span class="token punctuation">)</span>
+v<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> f<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:13: error: Incompatible types <span class="token keyword">in</span> assignment <span class="token punctuation">(</span>expression has <span class="token builtin class-name">type</span> <span class="token string">"str"</span>, variable has <span class="token builtin class-name">type</span> <span class="token string">"int"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>Scoping rules for <code class="language-text">TypeVar</code></h2>
+<ul>
+<li><code class="language-text">TypeVar</code> used in different generic function will be inferred to be
+different types.</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x
+
+<span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>y<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> y
+
+a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> foo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>    <span class="token comment"># ok: T is inferred to be int</span>
+b<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> bar<span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">)</span>  <span class="token comment"># error: T is inferred to be str</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:12: error: Incompatible types <span class="token keyword">in</span> assignment <span class="token punctuation">(</span>expression has <span class="token builtin class-name">type</span> <span class="token string">"str"</span>, variable has <span class="token builtin class-name">type</span> <span class="token string">"int"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<ul>
+<li><code class="language-text">TypeVar</code> used in a generic class will be inferred to be same types.</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar<span class="token punctuation">,</span> Generic
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span>Generic<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> x
+
+    <span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> y<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> y
+
+f<span class="token punctuation">:</span> Foo<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> f<span class="token punctuation">.</span>foo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>    <span class="token comment"># ok: T is inferred to be int</span>
+b<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> f<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">)</span>  <span class="token comment"># error: T is expected to be int</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:15: error: Incompatible types <span class="token keyword">in</span> assignment <span class="token punctuation">(</span>expression has <span class="token builtin class-name">type</span> <span class="token string">"int"</span>, variable has <span class="token builtin class-name">type</span> <span class="token string">"str"</span><span class="token punctuation">)</span>
+foo.py:15: error: Argument <span class="token number">1</span> to <span class="token string">"bar"</span> of <span class="token string">"Foo"</span> has incompatible <span class="token builtin class-name">type</span> <span class="token string">"str"</span><span class="token punctuation">;</span> expected <span class="token string">"int"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li><code class="language-text">TypeVar</code> used in a method but did not match any parameters which
+declare in <code class="language-text">Generic</code> can be inferred to be different types.</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar<span class="token punctuation">,</span> Generic
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+S <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"S"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span>Generic<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># S does not match params</span>
+
+    <span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> T<span class="token punctuation">,</span> y<span class="token punctuation">:</span> S<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> S<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> y
+
+    <span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> z<span class="token punctuation">:</span> S<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> S<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> z
+
+f<span class="token punctuation">:</span> Foo<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+a<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> f<span class="token punctuation">.</span>foo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"foo"</span><span class="token punctuation">)</span>  <span class="token comment"># S is inferred to be str</span>
+b<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> f<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token number">12345678</span><span class="token punctuation">)</span>  <span class="token comment"># S is inferred to be int</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$  mypy --strict foo.py</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<ul>
+<li><code class="language-text">TypeVar</code> should not appear in body of method/function if it is
+unbound type.</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar<span class="token punctuation">,</span> Generic
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">)</span>
+S <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"S"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">:</span> T <span class="token operator">=</span> x    <span class="token comment"># ok</span>
+    b<span class="token punctuation">:</span> S <span class="token operator">=</span> <span class="token number">123</span>  <span class="token comment"># error: invalid type</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:8: error: Invalid <span class="token builtin class-name">type</span> <span class="token string">"foo.S"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>Restricting to a fixed set of possible types</h2>
+<p><code class="language-text">T = TypeVar(&#39;T&#39;, ClassA, ...)</code> means we create a <strong>type variable with a
+value restriction</strong>.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar
+
+<span class="token comment"># restrict T = int or T = float</span>
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"T"</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> T<span class="token punctuation">,</span> y<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> y
+
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+add<span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+add<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># mypy can detect wrong type</span>
+$ mypy --strict foo.py
+foo.py:10: error: Value of <span class="token builtin class-name">type</span> variable <span class="token string">"T"</span> of <span class="token string">"add"</span> cannot be <span class="token string">"object"</span>
+foo.py:11: error: Value of <span class="token builtin class-name">type</span> variable <span class="token string">"T"</span> of <span class="token string">"add"</span> cannot be <span class="token string">"str"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<h2><code class="language-text">TypeVar</code> with an upper bound</h2>
+<p><code class="language-text">T = TypeVar(&#39;T&#39;, bound=BaseClass)</code> means we create a <strong>type variable
+with an upper bound</strong>. The concept is similar to <strong>polymorphism</strong> in
+c++.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">#include &lt;iostream&gt;
+
+class Shape {
+public:
+    Shape(double width, double height) {
+        width_ = width;
+        height_ = height;
+    };
+    virtual double Area() = 0;
+protected:
+    double width_;
+    double height_;
+};
+
+class Rectangle: public Shape {
+public:
+    Rectangle(double width, double height)
+    :Shape(width, height)
+    {};
+
+    double Area() {
+        return width_ * height_;
+    };
+};
+
+class Triangle: public Shape {
+public:
+    Triangle(double width, double height)
+    :Shape(width, height)
+    {};
+
+    double Area() {
+        return width_ * height_ / 2;
+    };
+};
+
+double Area(Shape &amp;s) {
+    return s.Area();
+}
+
+int main(int argc, char *argv[])
+{
+    Rectangle r(1., 2.);
+    Triangle t(3., 4.);
+
+    std::cout &lt;&lt; Area(r) &lt;&lt; std::endl;
+    std::cout &lt;&lt; Area(t) &lt;&lt; std::endl;
+    return 0;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Like c++, create a base class and <code class="language-text">TypeVar</code> which bounds to the base
+class. Then, static type checker will take every subclass as type of
+base class.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> TypeVar
+
+
+<span class="token keyword">class</span> <span class="token class-name">Shape</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token builtin">float</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token builtin">float</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>width <span class="token operator">=</span> width
+        self<span class="token punctuation">.</span>height <span class="token operator">=</span> height
+
+    <span class="token keyword">def</span> <span class="token function">area</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span>Shape<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">area</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+        width<span class="token punctuation">:</span> <span class="token builtin">float</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>width
+        height<span class="token punctuation">:</span> <span class="token builtin">float</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>height
+        <span class="token keyword">return</span> width <span class="token operator">*</span> height
+
+
+<span class="token keyword">class</span> <span class="token class-name">Triangle</span><span class="token punctuation">(</span>Shape<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">area</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+        width<span class="token punctuation">:</span> <span class="token builtin">float</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>width
+        height<span class="token punctuation">:</span> <span class="token builtin">float</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>height
+        <span class="token keyword">return</span> width <span class="token operator">*</span> height <span class="token operator">/</span> <span class="token number">2</span>
+
+
+S <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">"S"</span><span class="token punctuation">,</span> bound<span class="token operator">=</span>Shape<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">area</span><span class="token punctuation">(</span>s<span class="token punctuation">:</span> S<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span>area<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+r<span class="token punctuation">:</span> Rectangle <span class="token operator">=</span> Rectangle<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+t<span class="token punctuation">:</span> Triangle <span class="token operator">=</span> Triangle<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+i<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">5566</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>area<span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>area<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>area<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:40: error: Value of <span class="token builtin class-name">type</span> variable <span class="token string">"S"</span> of <span class="token string">"area"</span> cannot be <span class="token string">"int"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>@overload</h2>
+<p>Sometimes, we use <code class="language-text">Union</code> to infer that the return of a function has
+multiple different types. However, type checker cannot distinguish which
+type do we want. Therefore, following snippet shows that type checker
+cannot determine which type is correct.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Union
+
+
+<span class="token keyword">class</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>arr <span class="token operator">=</span> arr
+
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+arr <span class="token operator">=</span> Array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+x<span class="token punctuation">:</span><span class="token builtin">int</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+y<span class="token punctuation">:</span><span class="token builtin">str</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token string">"2"</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+foo.py:16: error: Incompatible types <span class="token keyword">in</span> assignment <span class="token punctuation">(</span>expression has <span class="token builtin class-name">type</span> <span class="token string">"Union[int, str]"</span>, variable has <span class="token builtin class-name">type</span> <span class="token string">"int"</span><span class="token punctuation">)</span>
+foo.py:17: error: Incompatible types <span class="token keyword">in</span> assignment <span class="token punctuation">(</span>expression has <span class="token builtin class-name">type</span> <span class="token string">"Union[int, str]"</span>, variable has <span class="token builtin class-name">type</span> <span class="token string">"str"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>Although we can use <code class="language-text">cast</code> to solve the problem, it cannot avoid typo
+and <code class="language-text">cast</code> is not safe.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span>  List<span class="token punctuation">,</span> Union<span class="token punctuation">,</span> cast
+
+
+<span class="token keyword">class</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>arr <span class="token operator">=</span> arr
+
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+arr <span class="token operator">=</span> Array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+x<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> cast<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+y<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> cast<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># typo. we want to assign arr["2"]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+$ <span class="token builtin class-name">echo</span> <span class="token variable">$?</span>
+<span class="token number">0</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>Using <code class="language-text">@overload</code> can solve the problem. We can declare the return type
+explicitly.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Generic<span class="token punctuation">,</span> List<span class="token punctuation">,</span> Union<span class="token punctuation">,</span> overload
+
+
+<span class="token keyword">class</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>arr <span class="token operator">=</span> arr
+
+    @overload
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+    @overload
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+arr <span class="token operator">=</span> Array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+x<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+y<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token string">"2"</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict foo.py
+$ <span class="token builtin class-name">echo</span> <span class="token variable">$?</span>
+<span class="token number">0</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<div class="admonition warning">
+<p>Based on PEP 484, the <code class="language-text">@overload</code> decorator just <strong>for type checker
+only</strong>, it does not implement the real overloading like c++/java. Thus,
+we have to implement one exactly non-<code class="language-text">@overload</code> function. At the
+runtime, calling the <code class="language-text">@overload</code> function will raise
+<code class="language-text">NotImplementedError</code>.</p>
+</div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> List<span class="token punctuation">,</span> Union<span class="token punctuation">,</span> overload
+
+
+<span class="token keyword">class</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>arr <span class="token operator">=</span> arr
+
+    @overload
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> i<span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+arr <span class="token operator">=</span> Array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    x<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">except</span> NotImplementedError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"NotImplementedError"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ python foo.py
+NotImplementedError</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2>Stub Files</h2>
+<p>Stub files just like header files which we usually use to define our
+interfaces in c/c++. In python, we can define our interfaces in the same
+module directory or <code class="language-text">export MYPYPATH=${stubs}</code></p>
+<p>First, we need to create a stub file (interface file) for module.</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ <span class="token function">mkdir</span> fib
+$ <span class="token function">touch</span> fib/__init__.py fib/__init__.pyi</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>Then, define the interface of the function in <code class="language-text">__init__.pyi</code> and
+implement the module.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># fib/__init__.pyi</span>
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token comment"># fib/__init__.py</span>
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">,</span> b
+    <span class="token keyword">return</span> a</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Then, write a test.py for testing <code class="language-text">fib</code> module.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># touch test.py</span>
+<span class="token keyword">import</span> sys
+
+<span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+
+p <span class="token operator">=</span> Path<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">.</span>parent <span class="token operator">/</span> <span class="token string">"fib"</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> fib <span class="token keyword">import</span> fib
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">10.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>output:</p>
+<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">$ mypy --strict test.py
+test.py:10: error: Argument <span class="token number">1</span> to <span class="token string">"fib"</span> has incompatible <span class="token builtin class-name">type</span> <span class="token string">"float"</span><span class="token punctuation">;</span> expected <span class="token string">"int"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p><a href="https://www.pythonsheets.com/">Acesse a Referência original 1:</a>
+<a href="https://www.pythoncheatsheet.org/">Acesse a Referência original 2:</a></p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsSAAALEgHS3X78AAACwUlEQVQ4y42UWU8UQRDHefFjGL+Arz6aKIlHMOFNXiSBqFEw0ZiIbtCAIYTIIYeGQ1dwOeKycigQD1DX5QwJEoSNirLdPdPbMz3dM73LqfFNaxjDrhiBpDLpY37dVf+q6gxKyM6mx4i2af9uZeyEIWKa2FlB9jKCr2FgHe8NBtISeH6UhnxWoFB2+0R0knKBYX1HGLuucguHHxt3j6mX98yxIBuq5jAeDzLOU/x2GGIj3wiL4+iUXpWpYlEtsY6cZaTW0OcZvTpTLc5qjBHP/xQMc8DgYIMRiLC/zBqo4M4qwova3FtKNaLWUc8ta6iGS4X1WBoMJFhyA828iFcdSUTaje4b1vuAYUn3rECBbDsvl3+ikWYz5BN2AmkpGJO45k4GK83qoyroE71l1mgn67oqkt8R/kqEg1vPyoE7PFhkjTQbMPXCzvCuNQziz7P9efLTtP4xTOtPKRjUgELdDKKN6/ADrjycqDup4hr27nNhLyVTfaz1nNz4FYNoQef+Mg5SQ7T1WarrioCBWkXPynlfqQXibRWMC4MbIy1mQ7YKB9jzCt5bakFVRNrZu0eGwfDTYqvljC0TaLTT6LwshIP0FIwJo+TLB32wivfctK4dWJnqZYEC0Zxjh9sM2IVU+fPlRIhND7D2QilV2s1e9YKqkz2s8bTzutF802KCvCAVhKNtbkU6WG8Jf3Xf7LvNZeJvGCbgecclWXIwGbgoyw8lF8YpKESWiAdDYYHDTTmOt75V4X/yDKnSlsjsMJ0L09rjCtQCxost+QMBeX3/CpSHsHF6e6WKBPIBANQGpHq4yRQKw4qGSKjYurBvLVgkIAvpXbG9POHUphy7Idvx59sPc+0HuXZdlqo9ocaeMCDhIPrfloTLqcvPR+jCGI1O6NFxHdoAZIOuhrLf5TFwldCIaeAtY3G3sbe9AXt6SXa133dG1a0ljAUNAAAAAElFTkSuQmCC" alt="Reativa" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/d2742f2dddd737dec60ee2a5226edb06/000d3/icon.png 1x,
+/static/d2742f2dddd737dec60ee2a5226edb06/bc2a0/icon.png 1.5x,
+/static/d2742f2dddd737dec60ee2a5226edb06/89cf4/icon.png 2x" /><img loading="lazy" width="50" height="50" srcset="/static/d2742f2dddd737dec60ee2a5226edb06/000d3/icon.png 1x,
+/static/d2742f2dddd737dec60ee2a5226edb06/bc2a0/icon.png 1.5x,
+/static/d2742f2dddd737dec60ee2a5226edb06/89cf4/icon.png 2x" src="/static/d2742f2dddd737dec60ee2a5226edb06/000d3/icon.png" alt="Reativa" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p><strong>Está curtindo os conteúdos da Reativa? Quer que a gente te ajude a ser um dev melhor?<!-- --> </strong> <!-- --> <a href="http://bit.ly/form-reativa" target="_blank" rel="noopener noreferrer">Deixe seu melhor email aqui.</a> </p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/python-sqlalchemy/">← <!-- -->Python tudo sobre SQLAlchemy</a></li><li><a rel="next" href="/python-code-style/">Python tudo sobre Style<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2020<!-- -->, Sua melhor escolha para aprender programação:<!-- --> <a href="https://reativa.dev">Reativa Tecnologia</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-155080700-5', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/python-typing/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-da4c9f678cc075cd8c26.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-2642abeb110b544c12ef.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ba8fab707f547b8d2140.js"],"component---src-pages-index-js":["/component---src-pages-index-js-511e09b2f0f1386b8494.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-2642abeb110b544c12ef.js" async=""></script><script src="/commons-2011af21236d35f89581.js" async=""></script><script src="/app-da4c9f678cc075cd8c26.js" async=""></script><script src="/netlify-identity-widget-71f3202b04975b5e224a.js" async=""></script><script src="/styles-989bb08664f2608f37ec.js" async=""></script><script src="/webpack-runtime-002569f02672c1c38772.js" async=""></script></body></html>
